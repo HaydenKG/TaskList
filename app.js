@@ -21,7 +21,6 @@ taskList.addEventListener("click", deleteCheck);
 function changeBG() {
     var randomNum = Math.floor(Math.random()*6);
     background.style.backgroundImage = "url(media/" + randomNum + ".webp)";
-    console.log(randomNum);
 }
 
 function addTask(event) {
