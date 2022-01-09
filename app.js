@@ -1,4 +1,5 @@
 //Selectors
+const background = document.querySelector(".backgroundimg");
 const form = document.getElementById('form');
 const taskInput = document.querySelector(".task-input");
 const taskBtn = document.querySelector(".task-btn");
@@ -9,11 +10,20 @@ let tasks;
 let checkedMap;
 
 //Event listeners
-document.addEventListener("DOMContentLoaded", getTasks);
+document.addEventListener("DOMContentLoaded", () => {
+    getTasks();
+    changeBG();
+});
 taskBtn.addEventListener("click", addTask);
 taskList.addEventListener("click", deleteCheck);
 
 //Functions
+function changeBG() {
+    var randomNum = Math.floor(Math.random()*6);
+    background.style.backgroundImage = "url(media/" + randomNum + ".webp)";
+    console.log(randomNum);
+}
+
 function addTask(event) {
     if (form.style.minHeight == "80vh") {
         let id = null;

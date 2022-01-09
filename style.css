@@ -22,7 +22,7 @@ body {
     height: 100em;
     position: fixed;
     z-index: -5;
-    background-image: url("https://picsum.photos/1920/1080.webp");
+    background-image: url(media/1.webp);
     background-color: whitesmoke;
 }
 
